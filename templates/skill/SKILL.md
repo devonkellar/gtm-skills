@@ -17,7 +17,10 @@ metadata:
 
 1. [First step — a GTM verb: "check the CRM", "load the ICP", "pull recent replies". Never a vendor tool name.]
 2. [Next step.]
-3. [If a step has depth worth its own page, move it to references/<topic>.md and say here when to read it.]
+3. [If a step has depth worth its own page — a scoring rubric, worked examples, a
+   channel variant — move it to references/<topic>.md and say here when to read it.
+   Most skills worth installing ship 1–4 reference pages; see
+   templates/skill/references/example-reference.md for the shape.]
 
 ## What good looks like
 

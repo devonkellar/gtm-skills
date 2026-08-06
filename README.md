@@ -29,7 +29,7 @@ Add `-a claude-code`, `-a cursor`, `-a codex`, etc. to target a specific agent; 
 
 You don't need to know git. Paste this to Claude, Cursor, or any capable agent:
 
-> Fetch https://raw.githubusercontent.com/swan-gtm/gtm-skills/main/AGENTS.md and follow its submission flow. Interview me about my GTM skill, draft it in their format, and submit it.
+> Fetch https://raw.githubusercontent.com/swan-gtm/gtm-skills/main/AGENTS.md and follow its submission flow. Interview me thoroughly about my GTM skill — the full playbook, including my rubrics, numbers, and real examples — draft it in their format with reference pages for the depth, and submit it.
 
 Your agent will interview you, package your playbook in our format, validate it, and open the PR (or a submission issue if it can't use git). Details in [CONTRIBUTING.md](CONTRIBUTING.md).
 

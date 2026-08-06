@@ -39,11 +39,15 @@ Don't transcribe a process — extract judgment. A skill that's just steps will 
 
 1. **When does this play run?** What's the trigger — a signal, a moment in the deal, a cadence?
 2. **What does it produce?** The concrete output (a list, a sequence, a brief, an updated pipeline).
-3. **Walk me through how you actually do it.** The procedure, tools aside.
-4. **What do you notice first that others miss?** The expert's tell.
-5. **What's the common mistake?** What does the mediocre version of this look like?
-6. **How do you know the output is good?** The quality bar, concretely.
-7. **Who are you?** (First submission only — name, role, LinkedIn, company, email; for `author.md`.)
+3. **Walk me through how you actually do it.** The procedure, tools aside — and keep going past the first pass. The real playbook has branches: what changes by segment, by deal size, by what the data shows.
+4. **What are the actual numbers?** Thresholds, scoring rubrics, caps, benchmarks — the values the user really uses, not "it depends". If they score things, get the whole rubric.
+5. **Give me two or three real examples.** A worked case from start to finish, an edge case, the time it went wrong.
+6. **What do you notice first that others miss?** The expert's tell.
+7. **What's the common mistake?** What does the mediocre version of this look like?
+8. **How do you know the output is good?** The quality bar, concretely.
+9. **Who are you?** (First submission only — name, role, LinkedIn, company, email; for `author.md`.)
+
+**Don't stop early.** Before drafting, ask: "What else do you check or do here that we haven't covered?" — and keep asking until the answer is genuinely nothing. The depth you extract in this interview (rubrics, numbers, worked examples) becomes `references/` pages; a thin interview produces a thin skill, and thin skills get sent back for exactly that.
 
 ### 2. Draft the files
 
@@ -68,9 +72,9 @@ contributors: []        # other creators' slugs, if any — omit if none
 
 - **Tool-agnostic, always.** GTM verbs — "check the CRM", "load the ICP", "pull recent replies" — never vendor tool names. The reader's stack is unknown.
 - Structure: when it applies (one line) → what it produces (one line) → the procedure in `##` sections → a **`## What good looks like`** section (mandatory — encode answers from interview questions 4–6) → hard rules (MUST/NEVER) last.
-- Terse and decisive. ~600 words target. No filler, no "recently", no first-person plural, no placeholder text left behind.
+- Terse and decisive in the writing — but **deep in the substance**. The parent body is the spine: sharp, no filler, no "recently", no first-person plural, no placeholder text left behind. 600–800 words is a good spine; it is a floor for seriousness, not a ceiling on depth.
+- The depth that makes a skill worth installing lives in `references/<topic>.md` pages: full scoring rubrics with real numbers, worked examples, templates, edge-case playbooks, channel variants. The body says when to read each one. **The library's flagship skills ship 2–5 reference pages** — a submission with no references usually means the interview stopped too early, and a bare checklist gets sent back.
 - Don't reference other skills by name; describe the next action in verbs.
-- Deep material (worked examples, frameworks, channel variants) goes in `references/<topic>.md`, and the body says when to read each one.
 
 **`skills/<author>/author.md`** (first submission): frontmatter `name`, `avatarUrl`, `title`, `linkedinUrl`, `companyDomain`, `email`; the bio is the body text. The directory name is the slug — there is no slug field.
 

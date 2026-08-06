@@ -22,7 +22,7 @@ No git? Open a ["Submit a skill" issue](https://github.com/swan-gtm/gtm-skills/i
 - **Judgment, not steps.** A skill captures what the best operator notices first, the trap the average one falls into, and what good output looks like. Every skill has a `## What good looks like` section. A bare checklist gets sent back.
 - **Tool-agnostic.** GTM verbs ("check the CRM", "load the ICP") — never vendor tool names. Readers run HubSpot, Salesforce, Attio, spreadsheets, or nothing.
 - **Dense description.** Leads with "Use this skill when…" — it's what an agent reads to decide when to fire your skill.
-- **Compact.** ~600 words of instructions; past ~800, move depth into `references/`.
+- **Deep, not padded.** Extensive skills are the bar, not the exception — full rubrics with real numbers, worked examples, edge cases. Keep the parent body a sharp ~600–800-word spine and put the depth in `references/` pages (flagship skills ship 2–5 of them; see [account-tier-scoring](https://www.gtmskills.com/skill/account-tier-scoring) and [outreach-execution](https://www.gtmskills.com/skill/outreach-execution) for the bar). Padding gets trimmed; depth gets featured.
 - **No rot.** No dates, no "recently", no UI-specific references.
 
 ## Review — the five gates
