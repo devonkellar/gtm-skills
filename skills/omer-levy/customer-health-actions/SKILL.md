@@ -78,7 +78,7 @@ For READY (expansion):
 For HIGH RISK (escalation):
 - To the executive sponsor on the customer side (or, when not known, the original buyer)
 - Opens with awareness of the risk trigger (acknowledged carefully — don't sound surveillance-y)
-- Leads with usage data and impact metrics
+- Leads with the strongest verified risk signal from the Lusha scan; if the user has shared product usage data, weave it in — never invent usage numbers or impact metrics
 - Closes with a specific next-step (executive briefing, contract review, value-reinforcement workshop)
 - 4-6 sentences
 

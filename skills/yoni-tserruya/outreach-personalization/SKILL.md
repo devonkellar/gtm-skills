@@ -165,9 +165,13 @@ Flag unverified or departed contacts separately:
 
 Contacts not messaged:
 - [Contact] at [Company] — [reason: departed /
-  not found in Lusha / title changed]
+  not found in Lusha]
   Recommended action: [find new contact /
   verify manually / skip]
+
+Title-changed contacts are messaged, with the angle
+adjusted to the new role, and flagged in the summary
+table.
 
 ---
 
