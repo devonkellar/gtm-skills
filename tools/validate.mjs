@@ -24,6 +24,52 @@ const CATEGORIES = new Set([
   'Ads', 'Affiliates', 'Newsletters',
 ]);
 
+// Authors who predate the email requirement (2026-08-07). New submissions hard-fail
+// without `email:`; these stay warnings until backfilled. Remove slugs as emails land —
+// this list only shrinks.
+const EMAIL_GRANDFATHERED = new Set([
+  'alex-vacca',
+  'amos-bar-joseph',
+  'ariel-cohen',
+  'austin-hay',
+  'bojan-berisavljevic',
+  'brad-smith',
+  'brianne-thomas',
+  'daniel-bustamante',
+  'danni-chen',
+  'dave-engel',
+  'din-arbel',
+  'dusan-vystrcil',
+  'emilia-korczynska',
+  'gal-tamir',
+  'huxley-peckham',
+  'ido-goldberg',
+  'ivan-falco',
+  'jeremy-hurst',
+  'john-williams',
+  'jorge-macias',
+  'katya-tarapovskaia',
+  'kevin-kd-dorsey',
+  'luke-shalom',
+  'maja-voje',
+  'manny-medina',
+  'maxwell-nimmo',
+  'omer-levy',
+  'pete-mientkiewicz',
+  'peter-cools',
+  'rutger-katz',
+  'ryan-estes',
+  'sabahudin-murtic',
+  'sam-dunning',
+  'sangram-vajre',
+  'steve-armenti',
+  'thomas-marcelle',
+  'tim-yakubson',
+  'udi-cohen',
+  'victor-moen',
+  'yahav-fuchs',
+]);
+
 const FORBIDDEN_SKILL_KEYS = [
   'prefix', 'slug', 'author', 'apps', 'authorAvatar', 'authorUrl', 'isDefault', 'isOrgEditable', 'license',
 ];
@@ -146,7 +192,13 @@ for (const entry of fs.readdirSync(SKILLS_DIR, { withFileTypes: true })) {
     } else if (!/^[a-z0-9][a-z0-9.-]*\.[a-z]{2,}$/.test(fm.companyDomain)) {
       err(rel(authorMd), `\`companyDomain: ${fm.companyDomain}\` should be a bare domain like acme.com — no protocol, no path`);
     }
-    if (!fm.email) warn(rel(authorMd), 'no `email:` — maintainers can\'t reach you about your skills; add a work address you\'re comfortable having public');
+    if (!fm.email) {
+      if (EMAIL_GRANDFATHERED.has(authorSlug)) {
+        warn(rel(authorMd), 'no `email:` (grandfathered) — backfill so maintainers can send acceptance/rejection and review mail');
+      } else {
+        err(rel(authorMd), 'frontmatter is missing `email:` — required; maintainers use it for acceptance, rejection, and review questions. Use a work address you\'re comfortable having public');
+      }
+    }
     if (!fm.avatarUrl) warn(rel(authorMd), 'no `avatarUrl:` — maintainers will take your LinkedIn photo and re-host it (submitting means you\'re OK with that)');
   }
   if (fs.existsSync(path.join(authorDir, 'SKILL.md'))) {
