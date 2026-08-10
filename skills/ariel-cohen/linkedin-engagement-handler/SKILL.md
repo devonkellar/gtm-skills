@@ -1,6 +1,6 @@
 ---
 name: "linkedin-engagement-handler"
-title: LinkedIn post engagement handler
+title: Handle LinkedIn post engagement signal
 description: "Use this skill when monitoring comments and reactions on a team member's LinkedIn posts. Comments get the full treatment — ICP + persona gating, CRM and account-memory logging, lead scoring, and a high-value path to connection requests and Slack alerts — while lone reactions are logged as a light touch unless the account is top-tier or a repeat engager. Repeat engagers escalate to high intent after an active-buyer check, with a personalized multi-channel draft queued for review."
 category: Signals
 ---

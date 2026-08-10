@@ -1,6 +1,6 @@
 ---
-name: inbound-connection-request-handler
-title: Inbound connection request handler
+name: handle-linkedin-connection-request-signal
+title: Handle LinkedIn connection request signal
 description: >-
   Use this skill when someone sends a team member an inbound LinkedIn connection
   request. An inbound request is a deliberate, ACTIVE first-party intent signal —
