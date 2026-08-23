@@ -100,7 +100,7 @@ The rhetorical question opener is on the inventory. The pass flagged it and the 
 
 The author's fingerprint documents that 9 of their last 15 posts open with a question, and those posts outperform their others on engagement. This is a real habit, visible in genuine samples predating any AI use, and their audience recognizes it.
 
-**Resolution:** the opener stays. The rest of the piece still gets all four passes.
+**Resolution:** the opener stays. The rest of the piece still gets the full pass.
 
 This is the fingerprint overriding the tell list, and it is the most common way a careless pass damages a draft. The tell list describes the average machine draft. It does not describe this person. When a flagged construction appears repeatedly in the author's genuine, pre-AI work, it is voice, and removing it makes the piece less like them, not more.
 

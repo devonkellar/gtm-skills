@@ -1,6 +1,6 @@
 # Detection tests
 
-Run all seven. Each catches a failure the others miss. A draft that fails any test goes back through the pass, and the pass repeats until the battery comes back clean.
+Run every one that applies — all seven for a team running several accounts, the first six for a single author publishing alone. Each catches a failure the others miss. A draft that fails any test goes back through the pass, and the pass repeats until the battery comes back clean.
 
 ## 1. The squint test
 

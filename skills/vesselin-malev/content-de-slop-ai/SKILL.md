@@ -34,7 +34,7 @@ The order is the method. Reversing it produces a draft that has been word-swappe
 
 6. **Calibrate for the channel.** Feed posts, cold email, long-form, and proof content each punish different tells.
 
-7. **Prove it clean.** Run the full detection battery. A draft ships when it passes all seven tests, and never before.
+7. **Prove it clean.** Run the full detection battery. A draft ships when it passes every applicable test, and never before — the correlation check is the one exception, since it only applies to teams running several accounts.
 
 ## The reference pages
 
@@ -42,7 +42,7 @@ The order is the method. Reversing it produces a draft that has been word-swappe
 - `references/channel-calibration.md` covers feed posts, cold email, newsletters and long-form, and case studies and proof content.
 - `references/detection-tests.md` carries the seven tests, what each one catches, and what a repeated failure means.
 - `references/voice-fingerprint.md` covers building the author document that overrides the tell list.
-- `references/worked-examples.md` walks four passes end to end, including one where a flagged construction was correct and stayed.
+- `references/worked-examples.md` walks three passes end to end, plus one case where a flagged construction was correct and stayed.
 
 ## The rule underneath the lexicon
 
@@ -62,7 +62,7 @@ When a draft keeps failing the lineup or the x-ray after repeated passes, the pr
 
 - MUST rewrite structure before touching word choice.
 - MUST trace every number and name to source material, or cut it.
-- MUST run all seven detection tests before anything ships.
+- MUST run every applicable detection test before anything ships (the correlation check applies only to multi-account teams).
 - NEVER compensate with slang, forced edge, or manufactured casualness.
 - NEVER treat paraphrase alone as humanizing. It preserves the structure that gives the draft away.
 - NEVER override an author's real voice with the tell list.

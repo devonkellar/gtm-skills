@@ -1,6 +1,6 @@
 # Channel calibration
 
-The four passes are constant. What changes by channel is which tells do the most damage and where the specificity has to land.
+The seven steps of the pass are constant. What changes by channel is which tells do the most damage and where the specificity has to land.
 
 ## Feed posts
 

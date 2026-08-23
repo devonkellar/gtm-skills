@@ -1,5 +1,6 @@
 ---
 name: Nikhil Mirza
+avatarUrl: https://www.gtmskills.com/authors/nikhil-mirza.jpg
 title: Sr Director, Sales Operations, Taboola
 linkedinUrl: https://www.linkedin.com/in/nikhilmirza/
 companyDomain: taboola.com
