@@ -90,6 +90,8 @@ const parseFrontmatter = (raw) => {
   if (end === -1) return null;
   const block = raw.slice(4, end);
   const data = {};
+  const seen = new Set();
+  const dupes = [];
   let currentListKey = null;
   for (const line of block.split('\n')) {
     if (!line.trim() || line.trim().startsWith('#')) continue;
@@ -110,6 +112,8 @@ const parseFrontmatter = (raw) => {
     const match = line.match(/^([A-Za-z_][A-Za-z0-9_]*)\s*:\s*(.*)$/);
     if (!match) continue;
     const [, key, value] = match;
+    if (seen.has(key)) dupes.push(key);
+    seen.add(key);
     currentListKey = null;
     if (value === '' ) {
       data[key] = [];
@@ -126,6 +130,7 @@ const parseFrontmatter = (raw) => {
     data.__lastKey = key;
   }
   delete data.__lastKey;
+  if (dupes.length) data.__dupes = [...new Set(dupes)];
   return data;
 };
 
@@ -133,6 +138,12 @@ const readFrontmatter = (file) => {
   const raw = fs.readFileSync(file, 'utf8');
   const data = parseFrontmatter(raw);
   if (!data) err(rel(file), 'missing YAML frontmatter — start the file with a --- fenced block');
+  if (data?.__dupes) {
+    // The last occurrence wins, so a duplicate key silently discards the first value —
+    // an empty `avatarUrl: ""` under a real one wipes the photo without any visible error.
+    err(rel(file), `duplicate frontmatter key(s): ${data.__dupes.join(', ')} — the last one wins and silently discards the earlier value; keep exactly one`);
+    delete data.__dupes;
+  }
   return data ?? {};
 };
 
