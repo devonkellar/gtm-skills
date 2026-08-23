@@ -82,11 +82,15 @@ TRIGGER: audience-scheduled over the "Champions" segment (weekly tick)
                    suspicion) belong in the digest flagged for human review.
   4a. FOLLOW branch (real move):
       [tool]        Enrich the NEW company (industry, headcount, region)
-      [conditional] ICP gate — outside ICP: log "moved, out of ICP", end
+      [conditional] ICP gate — outside ICP: log "moved, out of ICP" and end THIS
+                    branch only. 4b still runs and still reaches the digest: the
+                    champion leaving is what vacates the seat, and that is true
+                    whether or not their new employer is worth chasing.
       [agent]       Compose the play: champion-arrival note anchored on the shared
                     history (which product, which account, when), plus 2-3 suggested
                     buying-committee titles to source at the new account
-  4b. BACKFILL branch (real move, runs in parallel):
+  4b. BACKFILL branch (real move, runs in parallel — never gated on the new
+      employer's ICP fit):
       [tool]        Find people at the OLD account matching the vacated title/persona
       [agent]       Pick the most likely successor + note why; flag "seat vacated"
   5. [leaf]        Append one digest row per champion: verdict, evidence, plays
@@ -139,7 +143,8 @@ Build gotchas verified against the Alpha at time of writing — re-verify node s
 - **Use the current-role start date.** A mover who started < 12 months ago is in the
   honeymoon window — tooling decisions are open. Rank the FOLLOW digest by recency.
 - **Both plays evaluated for every real move.** A digest that only follows movers and never
-  flags vacated seats is half the value.
+  flags vacated seats is half the value. The out-of-ICP exit in 4a ends the FOLLOW branch,
+  not the run — an out-of-ICP mover still produces a vacated-seat row.
 - **The FOLLOW note leans on the shared history** — which product, at which account, roughly
   when. "Congrats on the new role" with no history is generic outbound wearing a costume.
 - The common mistake: treating every domain mismatch as a move. Acquisitions and rebrands
