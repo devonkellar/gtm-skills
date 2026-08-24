@@ -11,7 +11,7 @@ description: |
   it, and exactly what to change — every claim backed by a quote or a flagged absence, with
   hard word caps so the verdict stays sharp. Not generic sales advice; a strict mechanistic
   analysis that replaces it.
-category: Coaching
+category: Sales
 tags: [Sales]
 ---
 

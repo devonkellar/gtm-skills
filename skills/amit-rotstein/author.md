@@ -2,7 +2,7 @@
 name: Amit Rotstein
 title: Head of Product, Spotlight.ai
 linkedinUrl: https://www.linkedin.com/in/amitrotstein/
-companyDomain: https://www.spotlight.ai
+companyDomain: spotlight.ai
 email: amit.rotstein@spotlight.ai
 ---
 
