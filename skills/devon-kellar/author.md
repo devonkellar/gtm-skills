@@ -2,7 +2,7 @@
 name: Devon Kellar
 title: GTM Systems Builder
 linkedinUrl: https://www.linkedin.com/in/devonkellar/
-email: devonkellar@gmail.com
+email: devon@devonkellar.com
 companyDomain: devonkellar.com
 ---
 

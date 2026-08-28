@@ -1,6 +1,6 @@
 ---
-name: sales-team-intelligence
-title: Sales team intelligence
+name: sales-team-research
+title: Sales team research
 description: |
   Use this skill when you have a list of target accounts and need to know how each
   one actually sells before you write to them — "research these accounts", "how do
@@ -17,7 +17,7 @@ tags: [Sales, Demand Gen]
 contributors: []
 ---
 
-# Sales team intelligence
+# Sales team research
 
 Runs before outbound: you have a target list, and writing to it blind means guessing at how
 each company sells. Produces one brief per account, assembled by reading the public profiles
@@ -56,10 +56,35 @@ on. A wrong company is far worse than a missing one: the missing one is visible.
 Generic company names ("3PL", "Packaging Ltd") will match anything. Do not attempt automated
 resolution on them — flag them for manual handling.
 
+## Check you can actually read a team before you start
+
+This skill needs one capability: **a source of current employee records for a named company,
+carrying each person's self-written role text.** Any people-data provider, enrichment platform,
+or professional-network dataset your agent can already reach will do. The skill is
+provider-agnostic by design — the judgment below applies identically whichever one you have.
+
+Per person, the minimum useful record is:
+
+| Field | Needed for | If missing |
+|---|---|---|
+| Current title | Team shape, quota-carrier count | Cannot proceed — this is the floor |
+| Current-role description | Motion evidence | Motion tags will be thin or empty. That is an honest result, not a broken run |
+| Headline | Motion evidence | Fall back to role description |
+| Summary / about | Positioning language | Positioning section stays empty |
+| Role start date | Recent-hire signal | Skip the hires signal entirely; never estimate it |
+
+**Confirm the source returns current-role text, not just titles.** A provider that gives you
+names and job titles alone cannot support the evidence bar below, and a run against it will
+produce empty motion fields for every account. Better to know that before processing 200
+accounts than after.
+
+**If you have no such source, stop and say so.** Do not substitute guesswork from a company
+website or a search snippet: the entire value here is that each claim traces to a named
+person's own words, and a source that cannot supply those cannot support the output.
+
 ## Read the sales team, current roles first
 
-Pull the people the account employs in sales-shaped roles. For each, you need their current
-title, current-role description, headline, and summary — plus start dates where available.
+Pull the people the account employs in sales-shaped roles, and keep the fields listed above.
 
 Treat the function label with suspicion. **These systems tag people by their self-reported
 function, not by whether they carry a quota.** A "Sales Operations Analyst" is tagged sales.
@@ -148,6 +173,9 @@ finished.
 
 ## Rules
 
+- MUST confirm the people-data source returns current-role text, not titles alone, before
+  processing a list — and MUST stop and say so if no such source is available rather than
+  substituting website copy or search snippets.
 - MUST confirm a company match by reading the profile's own description, industry and
   specialties against the known account — never accept name similarity or a numeric score
   alone.
